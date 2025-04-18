@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon College</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+   <div class="container" id="mainHome">
+        <h1 style="text-align: center;">Welcome to Horizon College</h1>
+        <table>
+            <tr>
+                <td colspan="3"><h2>Choose Your Role</h2></td>
+            <tr class="role" >
+                <td><button id="admin">Admin</button></td>
+                <td><button id="student">Student</button></td>
+                <td><button id="teacher">Teacher</button></td>
+            </tr> 
+
+            <tr >
+                <td colspan="3"><img src="https://thearchitecturedesigns.com/wp-content/uploads/2020/04/University-of-Georgia-10.jpg"
+                alt="Student Image" width="700" height="300"></td>
+            </tr>
+        </table>
+   </div>
+
+   <!--style="display:none;" -->
+   <div id="student_page" >
+       <div id="student_home" class="student_home"  style="display:none;">
+        <h2>Student Home</h2>
+            <div>
+                    <form action="#" class="role_form" id="role_form" >
+                       <span class="role_form_item"><a id="existing_student">Login</a></span><span > | </span>
+                        <span class="role_form_item"><a id="new_student">Register </a> </span> 
+                    </form>
+
+                    <div id="student_home_entry" class="student_home_entry" >
+                        <table>
+                            <tr>
+                                <td> <h1 style="text-align: center;">Horizon College</h1></td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://thearchitecturedesigns.com/wp-content/uploads/2020/04/University-of-Georgia-10.jpg"
+                                    alt="Student Image" width="700" height="300"></td>
+                            </tr>
+                        </table>
+                    </div>
+            </div>
+
+             <!-- style="display:none;" -->
+            <div id="student_form"  >
+                
+                <form id="student_registration_form" class="login-form sign-up" action="#" style="display:none;">
+                   <h3>Student Registration</h3>
+                   <table>
+                        <tr>
+                            <td><label for="student_name">Name:</label></td>
+                            <td><input type="text" id="new_student_name" name="student_name" class="new_st_input"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="student_email">Email:</label></td>
+                            <td><input type="email" id="new_student_email" name="student_email" class="new_st_input"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="student_password">Password:</label></td>
+                            <td><input type="password" id="new_student_password" name="student_password" autocomplete="on" class="new_st_input"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="studnet_phone">Phone: </label></td>
+                            <td><input type="tel" id="new_student_phone" name="student_phone" class="new_st_input"></td>
+                        </tr>
+                            <td><label for="student_age">Age: </label></td>
+                            <td><input type="number" id="new_student_age" name="student_age" class="new_st_input"></td>
+                        <tr>
+                            <td colspan="2"><button type="button" id="student_sign_up">Register</button></td>
+                        </tr>
+                   </table>
+                </form>
+            </div>
+       
+            <div  id="student_login" >
+               
+                <form id="student_login_form"  style="display:none;" class="login-form" action="#">
+                     <h3>Student Login</h3>
+                   <table>
+                        <tr>
+                            <td><label for="student_emails">Email:</label></td>
+                            <td><input type="email" id="log_student_email" name="student_emails" ></td>
+                        </tr>
+                        <tr>
+                            <td><label for="student_password">Password:</label></td>
+                            <td><input type="password" id="log_student_password" name="student_password" autocomplete="on"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="button" id="student_login">Login</button></td>
+                        </tr>
+                   </table>
+                </form>
+            </div>
+
+        </div>
+
+        <div id="student_dashboard" >
+            <h2>Student Dashboard</h2>
+            <nav>
+                <ul class="nav">
+                    <li><button id="viewCourse_st">View Courses</button></li>
+                    <li><button  id="viewGrades_st">View Grades</button></li>
+                    <li><button  id="takeQuiz_st">Take Quiz</button></li>
+                    <li><button  id="viewprofile_st">View profiles</button></li>
+                </ul>
+            </nav>
+
+            <table class="course_list" id="course_list" style="display:none;">
+                <thead>
+                    <tr class="course_list_header">
+                        <th>Course</th>
+                        <th>Instructor</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody id="course_table_body">
+                    <!-- Course list will be populated here -->
+                    <tr>
+                        <td colspan="3">No courses available</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="grades_list" id="grades_list" style="display:none;">
+                <thead>
+                    <tr class="grades_list_header">
+                        <th>Course</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody id="grades_table_body">
+                    <!-- Grades will be populated here -->
+                    <tr>
+                        <td colspan="2">No grades available</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <table class="quiz_list" id="quiz_list" style="display:none;">
+                <thead>
+                    <tr class="quiz_list_header">
+                        <th colspan="4">Quiz</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="quiz_table_body">
+                    <!-- Quiz list will be populated here -->
+                    <tr>
+                        <td colspan="2">No quizzes available</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <table class="profile_list" id="profile_list" style="display:none;">
+                <thead>
+                    <tr class="profile_list_header">
+                        <th>Profile</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody id="profile_table_body">
+                    <!-- profile list will be populated here -->
+                    <tr>
+                        <td colspan="2">No profiles available</td>
+                    </tr>
+                </tbody>
+
+            </table>
+           
+        </div>
+
+
+        <div>
+
+        </div>
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div id="admin_home" style="display:none;">    
+        <h1>Admin Page</h1>
+        <div id="admin_login_form"  class="login-form">
+            <h2>Admin Login</h2>
+            <h4>Please varify your credintials</h4>
+            <form action="#">
+            <table>
+                <tr>
+                    <td><label for="admin_email">Email:</label></td>
+                    <td><input type="email" id="log_admin_email" name="admin_email" ></td>
+                </tr>
+                <tr>
+                    <td><label for="admin_password">Password:</label></td>
+                    <td><input type="password" id="log_admin_password" name="admin_password" autocomplete="on"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="button" id="admin_log">Login</button></td>
+                </tr>
+            </table>
+            </form>
+    
+        </div>
+
+
+        <div class="admin_dashboard" id="admin_dashboard" style="display:none;">
+            <h2>Admin Dashboard</h2>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#manage_students">Manage Students</a></li>
+                    <li><a href="#manage_teachers">Manage Teachers</a></li>
+                    <li><a href="#manage_courses">Manage Courses</a></li>
+                    <li><a href="#view_profiles">View profiles</a></li>
+                </ul>
+            </nav>
+            
+            <div style="display:flex; flex-direction: column; align-items: center; background-color: aliceblue;">
+                <table border="1" style="border: 1px solid black;">
+                <thead>
+                        <tr id="manage_students">
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>details</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student_list">
+                        
+                        <!-- Student list will be populated here -->
+                        <tr>
+                            <td colspan="4">
+                                <img src="https://thearchitecturedesigns.com/wp-content/uploads/2020/04/University-of-Georgia-10.jpg"
+                                alt="Student Image" width="500" height="300"></td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4"><button id="add_student">Add Student</button></td>
+                        </tr>
+                </thead>
+                </table>
+            </div>
+
+        </div>
+   </div>
+
+   <script src="main.js"></script>
+    <script src="admin.js"></script>
+    <script src="student.js"></script>
+    <script src="teacher.js"></script>
+    <script src="course.js"></script>
+    <script src="quiz.js"></script>
+    <script src="grade.js"></script>
+</body>
+</html>
